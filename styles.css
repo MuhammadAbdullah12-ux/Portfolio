@@ -309,6 +309,75 @@ img, canvas { display: block; max-width: 100%; }
 }
 
 /* ============================================
+   FLOATING SOCIAL SIDE RAIL
+   ============================================ */
+.social-rail {
+  position: fixed;
+  bottom: 0;
+  left: 28px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.social-rail-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(14, 20, 32, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline-strong);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+.social-rail-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.social-rail-item:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-3px) scale(1.1);
+}
+.social-rail-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  background: var(--bg-surface-3);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--hairline-strong);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+.social-rail-item:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+.social-rail-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--hairline-strong), transparent);
+}
+
+/* ============================================
    HERO — embedding-space canvas is the signature element
    ============================================ */
 .hero {
@@ -1109,6 +1178,7 @@ img, canvas { display: block; max-width: 100%; }
   .timeline-side-left .timeline-desc { margin-left: 0; }
 
   .orbit-field { transform: scale(0.62); margin: -40px auto -60px; }
+  .social-rail { display: none; }
 }
 
 @media (max-width: 520px) {
