@@ -75,39 +75,34 @@
         </div>
       </div>
 
-      <div class="hero-code-card reveal" aria-hidden="false">
-        <div class="code-card-header">
-          <div class="code-card-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-          </div>
-          <div class="code-card-title">rag_engine.py — Python</div>
-          <div class="code-card-badge">LIVE</div>
+      <div class="hero-portrait reveal" aria-hidden="false">
+        <div class="portrait-ring"></div>
+        <div class="portrait-frame">
+          <img src="profile.png" alt="Portrait of Muhammad Abdullah" loading="eager">
         </div>
-        <div class="code-card-body">
-          <pre><code><span class="c-keyword">from</span> <span class="c-module">ai_core</span> <span class="c-keyword">import</span> RAGPipeline, VectorDB
-
-<span class="c-comment"># Initialize high-throughput RAG engine</span>
-pipeline = RAGPipeline(
-    vector_db=VectorDB.QDRANT,
-    embedding=<span class="c-string">"text-embedding-3-large"</span>,
-    reranker=<span class="c-string">"cohere-v3-multilingual"</span>
-)
-
-<span class="c-comment"># Executive query execution</span>
-results = pipeline.search(
-    query=<span class="c-string">"Deploy production LLM agent"</span>,
-    top_k=<span class="c-number">5</span>
-)
-
-<span class="c-function">print</span>(f<span class="c-string">"Status: {results.status}"</span>)
-<span class="c-function">print</span>(f<span class="c-string">"Latency: {results.latency_ms}ms"</span>)</code></pre>
+        <div class="skill-orbit skill-orbit-1">
+          <span class="orbit-poly" data-skill="Python">
+            <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/></svg>
+            <em>Python</em>
+          </span>
         </div>
-        <div class="code-card-footer">
-          <div class="stat-pill"><span class="pulse-dot"></span> Latency: <strong>18ms</strong></div>
-          <div class="stat-pill">Accuracy: <strong>99.4%</strong></div>
-          <div class="stat-pill">Status: <strong>Online</strong></div>
+        <div class="skill-orbit skill-orbit-2">
+          <span class="orbit-poly" data-skill="RAG">
+            <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/></svg>
+            <em>RAG</em>
+          </span>
+        </div>
+        <div class="skill-orbit skill-orbit-3">
+          <span class="orbit-poly" data-skill="Next.js">
+            <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/></svg>
+            <em>Next.js</em>
+          </span>
+        </div>
+        <div class="skill-orbit skill-orbit-4">
+          <span class="orbit-poly" data-skill="FastAPI">
+            <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/></svg>
+            <em>FastAPI</em>
+          </span>
         </div>
       </div>
     </div>
