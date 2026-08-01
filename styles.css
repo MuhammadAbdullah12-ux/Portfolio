@@ -1314,7 +1314,36 @@ img, canvas { display: block; max-width: 100%; }
   .timeline-side-left .timeline-desc { margin-left: 0; }
 
   .orbit-field { transform: scale(0.62); margin: -40px auto -60px; }
-  .social-rail { display: none; }
+  
+  /* Mobile floating social rail & CV dock */
+  .social-rail {
+    left: 16px;
+    bottom: 16px;
+    z-index: 50;
+    gap: 0;
+  }
+  .social-rail-inner {
+    flex-direction: row;
+    padding: 6px 10px;
+    gap: 6px;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    background: rgba(14, 20, 32, 0.92);
+  }
+  .social-rail-item {
+    width: 34px; height: 34px;
+  }
+  .social-rail-line { display: none; }
+
+  .floating-cv-btn {
+    right: 16px;
+    bottom: 16px;
+    padding: 8px 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    z-index: 50;
+    background: rgba(14, 20, 32, 0.92);
+  }
 }
 
 @media (max-width: 520px) {
@@ -1323,4 +1352,6 @@ img, canvas { display: block; max-width: 100%; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .orbit-field { transform: scale(0.42); margin: -90px auto -110px; }
   .loader-bar { width: 220px; }
+  .social-rail { left: 12px; bottom: 12px; }
+  .floating-cv-btn { right: 12px; bottom: 12px; padding: 7px 12px; font-size: 0.64rem; }
 }
