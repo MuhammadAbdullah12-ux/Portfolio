@@ -1295,10 +1295,21 @@ img, canvas { display: block; max-width: 100%; }
   .hero-portrait { max-width: 260px; margin: 8px auto 0; order: -1; }
   .hero-copy { max-width: 100%; }
   .cat-grid { grid-template-columns: 1fr; }
-  .project-card-content { padding: 24px 20px; gap: 20px; }
-  .project-title-row { flex-direction: column; align-items: flex-start; gap: 12px; }
-
+  
+  /* Mobile project card formatting */
   .project-panel { position: static; padding: 0 0 24px; }
+  .project-card { border-radius: 14px; width: 100%; overflow: hidden; }
+  .card-chrome { padding: 10px 14px; }
+  .chrome-path { max-width: 170px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.72rem; }
+  .project-card-content { padding: 20px 16px; gap: 18px; }
+  .project-title-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .project-heading h3 { font-size: 1.35rem; line-height: 1.25; }
+  .project-action-btns { width: 100%; flex-wrap: wrap; gap: 8px; }
+  .project-btn { font-size: 0.75rem; padding: 7px 14px; }
+  .project-desc { font-size: 0.9rem; line-height: 1.55; }
+  .spec-highlights-grid { grid-template-columns: 1fr; gap: 10px; padding: 12px 14px; }
+  .spec-item { border-bottom: 1px dashed var(--hairline); padding-bottom: 6px; }
+  .spec-item:last-child { border-bottom: none; padding-bottom: 0; }
 
   .timeline-line { left: 20px; }
   .timeline-row { grid-template-columns: 40px 1fr; gap: 16px; padding: 20px 0; }
