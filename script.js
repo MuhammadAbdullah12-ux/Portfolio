@@ -9,17 +9,10 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 // ============================================
 (function loader() {
   const loaderEl = document.getElementById('loader');
-  const fill = document.getElementById('loader-fill');
-  const pctLabel = document.getElementById('loader-pct');
-  let pct = 0;
-
-  if (prefersReducedMotion) {
-    loaderEl.classList.add('loaded');
+  if (!loaderEl) {
     document.body.style.overflow = '';
     return;
   }
-
-  document.body.style.overflow = 'hidden';
 
   const interval = setInterval(() => {
     pct += Math.random() * 18 + 6;

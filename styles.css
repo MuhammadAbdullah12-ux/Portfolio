@@ -670,15 +670,10 @@ img, canvas { display: block; max-width: 100%; }
    REVEAL ANIMATION (scroll-triggered)
    ============================================ */
 .reveal {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-}
-.reveal.in-view {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
-.hero .reveal { transition-delay: calc(var(--i, 0) * 90ms); }
 
 /* ============================================
    ABOUT
