@@ -102,8 +102,8 @@ img, canvas { display: block; max-width: 100%; }
 
 .section-label {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
   color: var(--accent-2);
   margin-bottom: 16px;
   text-transform: uppercase;
