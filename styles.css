@@ -1082,8 +1082,10 @@ img, canvas { display: block; max-width: 100%; }
   white-space: nowrap;
   box-shadow: 0 8px 24px -8px rgba(0,0,0,0.4);
 }
-.chip-blue { border-color: var(--accent); color: var(--accent); }
-.chip-teal { border-color: var(--accent-2); color: var(--accent-2); }
+.orbit-chip.chip-blue { border-color: var(--accent); color: var(--accent); }
+.orbit-chip.chip-teal { border-color: var(--accent-2); color: var(--accent-2); }
+
+.mobile-tech-grid { display: none; }
 .chip-py { border-color: #FFC862; color: #FFC862; }
 
 /* ============================================
@@ -1313,7 +1315,38 @@ img, canvas { display: block; max-width: 100%; }
   .timeline-side-right { grid-row: 2; }
   .timeline-side-left .timeline-desc { margin-left: 0; }
 
-  .orbit-field { transform: scale(0.62); margin: -40px auto -60px; }
+  /* Hide cramped 3D orbit on mobile, show clean tech grid instead */
+  .orbit-field { display: none !important; }
+  .mobile-tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+    padding: 0 10px;
+  }
+  .m-chip {
+    font-family: var(--font-mono);
+    font-size: 0.86rem;
+    font-weight: 500;
+    padding: 9px 18px;
+    border-radius: 999px;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--hairline-strong);
+    color: var(--text-primary);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    transition: transform var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+  }
+  .m-chip:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+  .m-chip.chip-py { border-color: rgba(255, 200, 98, 0.4); color: #FFC862; }
+  .m-chip.chip-blue { border-color: rgba(91, 157, 255, 0.4); color: var(--accent); }
+  .m-chip.chip-teal { border-color: rgba(76, 224, 196, 0.4); color: var(--accent-2); }
+  .m-chip.chip-ts { border-color: rgba(139, 233, 253, 0.4); color: #8BE9FD; }
+  .m-chip.chip-api { border-color: rgba(189, 147, 249, 0.4); color: #BD93F9; }
   
   /* Mobile floating social rail & CV dock */
   .social-rail {
@@ -1348,7 +1381,6 @@ img, canvas { display: block; max-width: 100%; }
   .section-inner { padding: 0 20px; }
   .hero { padding: 110px 20px 60px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
-  .orbit-field { transform: scale(0.42); margin: -90px auto -110px; }
   .loader-bar { width: 220px; }
   .social-rail { left: 12px; bottom: 12px; }
   .hero-cv-btn { right: 16px; bottom: 20px; padding: 7px 12px; font-size: 0.64rem; }
