@@ -377,12 +377,12 @@ img, canvas { display: block; max-width: 100%; }
   background: linear-gradient(to bottom, var(--hairline-strong), transparent);
 }
 
-/* Minimal floating CV button on right corner */
-.floating-cv-btn {
-  position: fixed;
-  right: 28px;
-  bottom: 32px;
-  z-index: 40;
+/* Minimal CV button inside Hero section bottom-right corner */
+.hero-cv-btn {
+  position: absolute;
+  right: 32px;
+  bottom: 36px;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -400,16 +400,16 @@ img, canvas { display: block; max-width: 100%; }
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
 }
-.floating-cv-btn:hover {
+.hero-cv-btn:hover {
   color: var(--accent-2);
   border-color: var(--accent-2);
   transform: translateY(-3px);
   box-shadow: 0 12px 36px rgba(76, 224, 196, 0.2);
 }
-.floating-cv-btn svg {
+.hero-cv-btn svg {
   transition: transform var(--dur-fast) var(--ease);
 }
-.floating-cv-btn:hover svg {
+.hero-cv-btn:hover svg {
   transform: translateY(2px);
 }
 
@@ -1335,14 +1335,12 @@ img, canvas { display: block; max-width: 100%; }
   }
   .social-rail-line { display: none; }
 
-  .floating-cv-btn {
-    right: 16px;
-    bottom: 16px;
+  .hero-cv-btn {
+    right: 24px;
+    bottom: 24px;
     padding: 8px 14px;
     font-size: 0.68rem;
     letter-spacing: 0.12em;
-    z-index: 50;
-    background: rgba(14, 20, 32, 0.92);
   }
 }
 
@@ -1353,5 +1351,5 @@ img, canvas { display: block; max-width: 100%; }
   .orbit-field { transform: scale(0.42); margin: -90px auto -110px; }
   .loader-bar { width: 220px; }
   .social-rail { left: 12px; bottom: 12px; }
-  .floating-cv-btn { right: 12px; bottom: 12px; padding: 7px 12px; font-size: 0.64rem; }
+  .hero-cv-btn { right: 16px; bottom: 20px; padding: 7px 12px; font-size: 0.64rem; }
 }
