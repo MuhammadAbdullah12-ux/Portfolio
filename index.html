@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Abdullah — AI/ML Engineer</title>
+<meta name="description" content="Muhammad Abdullah — AI/ML Engineer building full-stack AI products: RAG systems, LLM-integrated apps, and NLP-powered platforms.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <p class="loader-eyebrow">PORTFOLIO · 2026</p>
+    <h2 class="loader-name"><span>Muhammad</span> <span class="accent-text">Abdullah</span></h2>
+    <div class="loader-bar"><div class="loader-bar-fill" id="loader-fill"></div></div>
+    <p class="loader-pct" id="loader-pct">0%</p>
+  </div>
+</div>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<!-- ambient hero canvas lives behind everything in the hero -->
+<canvas id="embedding-canvas"></canvas>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">MA<span class="nav-mark-dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about" data-nav="about">About</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#techstack" data-nav="techstack">Stack</a>
+      <a href="#contact" data-nav="contact" class="nav-cta">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme">
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-inner hero-split">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">query vector: <span class="typewriter" id="typewriter"></span></p>
+        <h1 class="hero-title reveal" id="hero-title" aria-label="Muhammad Abdullah">
+          <span class="title-line" data-text="Muhammad">Muhammad</span>
+          <span class="title-line" data-text="Abdullah">Abdullah</span>
+        </h1>
+        <p class="hero-role reveal">AI/ML Engineer <span class="dot-sep">·</span> Full-Stack Developer</p>
+        <p class="hero-sub reveal">
+          I build products where AI is load-bearing, not decorative — retrieval systems,
+          LLM-integrated apps, and the full-stack plumbing that gets them into someone's hands.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-portrait reveal" aria-hidden="false">
+        <div class="portrait-ring"></div>
+        <div class="portrait-frame">
+          <img src="assets/profile.png" alt="Portrait of Muhammad Abdullah" loading="eager">
+        </div>
+        <div class="skill-orbit skill-orbit-1">
+          <span class="orbit-poly" data-skill="Python">
+            <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/></svg>
+            <em>Python</em>
+          </span>
+        </div>
+        <div class="skill-orbit skill-orbit-2">
+          <span class="orbit-poly" data-skill="RAG">
+            <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/></svg>
+            <em>RAG</em>
+          </span>
+        </div>
+        <div class="skill-orbit skill-orbit-3">
+          <span class="orbit-poly" data-skill="Next.js">
+            <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/></svg>
+            <em>Next.js</em>
+          </span>
+        </div>
+        <div class="skill-orbit skill-orbit-4">
+          <span class="orbit-poly" data-skill="FastAPI">
+            <svg viewBox="0 0 100 100"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27"/></svg>
+            <em>FastAPI</em>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-cue" aria-hidden="true">
+      <span></span>
+      <p>scroll</p>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner about-grid">
+      <div class="about-copy reveal">
+        <p class="section-label">01 / About</p>
+        <h2>Full-stack, with AI at the center — not bolted onto the side.</h2>
+        <p>
+          I'm a Computer Science student at FAST NUCES and an AI Engineer Intern at
+          AIKSOL Technologies. Most of what I build sits at the intersection of applied
+          NLP/LLM work and the everyday full-stack engineering it takes to actually ship
+          something — schema design, API routes, auth, deployment, all of it.
+        </p>
+        <p>
+          Recently that's meant building a retrieval-augmented generation engine from
+          scratch, a semantic resume-matching platform, and a two-role learning app with
+          an AI tutor built into the product itself.
+        </p>
+      </div>
+      <div class="about-status reveal">
+        <div class="status-card">
+          <p class="status-line"><span class="status-prompt">&gt;</span> role: <span class="status-value">AI Engineer Intern @ AIKSOL</span></p>
+          <p class="status-line"><span class="status-prompt">&gt;</span> studying: <span class="status-value">BS Computer Science, FAST NUCES</span></p>
+          <p class="status-line"><span class="status-prompt">&gt;</span> focus: <span class="status-value">RAG systems, LLM integration, full-stack</span></p>
+          <p class="status-line"><span class="status-prompt">&gt;</span> status: <span class="status-value status-active">open to opportunities</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <p class="section-label reveal">02 / Selected work</p>
+      <h2 class="section-title reveal">Three systems, three different problems.</h2>
+      <p class="section-sub reveal">Scroll — cards stack up.</p>
+    </div>
+
+    <!-- Project 1: YomoLoco -->
+    <article class="project-panel reveal" style="--i:0">
+      <div class="project-card">
+        <div class="card-chrome"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><p>01 · rag-engine</p></div>
+        <div class="section-inner project-grid">
+          <div class="project-copy">
+            <p class="project-index">01</p>
+            <h3>YomoLoco <span class="project-alt">/ RepoMind</span></h3>
+            <p class="project-tagline">A retrieval-augmented generation engine for GitHub repositories.</p>
+            <p class="project-desc">
+              Ingests a repo's README, issues, and PRs, filters out bot noise, and keeps a
+              vector index in sync with the source using SHA-256 differential sync — so
+              re-indexing only touches what actually changed. Dense embeddings via FastEmbed,
+              vector search via Qdrant, relational metadata via SQLModel, all served through a
+              FastAPI backend.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/MuhammadAbdullah12-ux/YomoLoco" target="_blank" rel="noopener" class="link-arrow">View source</a>
+            </div>
+          </div>
+          <aside class="project-spec">
+            <p class="spec-label">Spec</p>
+            <dl>
+              <div class="spec-row"><dt>Retrieval accuracy</dt><dd>Grade A+ (15 eval queries)</dd></div>
+              <div class="spec-row"><dt>Embedding model</dt><dd>FastEmbed, 384-dim</dd></div>
+              <div class="spec-row"><dt>Vector store</dt><dd>Qdrant</dd></div>
+              <div class="spec-row"><dt>Sync method</dt><dd>SHA-256 differential</dd></div>
+              <div class="spec-row"><dt>Backend</dt><dd>Python, FastAPI, SQLModel</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 2: Resumify -->
+    <article class="project-panel reveal" style="--i:1">
+      <div class="project-card">
+        <div class="card-chrome"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><p>02 · resumify.app</p></div>
+        <div class="section-inner project-grid">
+          <div class="project-copy">
+            <p class="project-index">02</p>
+            <h3>Resumify</h3>
+            <p class="project-tagline">AI-powered resume analysis and job-fit matching.</p>
+            <p class="project-desc">
+              Parses resumes and job descriptions, then scores relevance using a combination
+              of NLP-based semantic similarity and exact skill matching — built to reduce both
+              false positives and false negatives compared to keyword-only ATS tools. Also
+              includes ATS compatibility checks, skill-gap analysis, and candidate ranking for
+              recruiters.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/MuhammadAbdullah12-ux/Resumify" target="_blank" rel="noopener" class="link-arrow">View source</a>
+            </div>
+          </div>
+          <aside class="project-spec">
+            <p class="spec-label">Spec</p>
+            <dl>
+              <div class="spec-row"><dt>Frontend</dt><dd>React, TypeScript</dd></div>
+              <div class="spec-row"><dt>Backend</dt><dd>Node.js, Express, PostgreSQL</dd></div>
+              <div class="spec-row"><dt>AI service</dt><dd>Python, FastAPI, NLP</dd></div>
+              <div class="spec-row"><dt>Matching</dt><dd>Semantic + exact skill scoring</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 3: CourseForge -->
+    <article class="project-panel reveal" style="--i:2">
+      <div class="project-card">
+        <div class="card-chrome"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><p>03 · course-forge-gamma.vercel.app</p></div>
+        <div class="section-inner project-grid">
+          <div class="project-copy">
+            <p class="project-index">03</p>
+            <h3>CourseForge</h3>
+            <p class="project-tagline">A two-role learning platform with an AI tutor built in.</p>
+            <p class="project-desc">
+              Instructors draft courses with AI assistance; students learn and chat with a
+              lesson-scoped AI tutor as they go. Role-based routing and middleware separate
+              the student and instructor experiences from one codebase, with the Gemini API
+              handling course generation, tutoring, and auto-graded quizzes.
+            </p>
+            <div class="project-links">
+              <a href="https://course-forge-gamma.vercel.app" target="_blank" rel="noopener" class="link-arrow">Live demo</a>
+              <a href="https://github.com/MuhammadAbdullah12-ux/CourseForge" target="_blank" rel="noopener" class="link-arrow">View source</a>
+            </div>
+          </div>
+          <aside class="project-spec">
+            <p class="spec-label">Spec</p>
+            <dl>
+              <div class="spec-row"><dt>Frontend</dt><dd>Next.js 15, React 19, Tailwind</dd></div>
+              <div class="spec-row"><dt>Database</dt><dd>PostgreSQL (Supabase), Prisma</dd></div>
+              <div class="spec-row"><dt>Auth</dt><dd>Clerk, role-based middleware</dd></div>
+              <div class="spec-row"><dt>LLM</dt><dd>Gemini API via Vercel AI SDK</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ EXPERIENCE / TIMELINE ============ -->
+  <section class="experience" id="experience">
+    <div class="section-inner">
+      <p class="section-label reveal">03 / Journey</p>
+      <h2 class="section-title reveal">My career &amp; experience</h2>
+    </div>
+    <div class="section-inner">
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <div class="timeline-row reveal">
+          <div class="timeline-side timeline-side-left">
+            <p class="timeline-role">BS Computer Science</p>
+            <p class="timeline-org">FAST NUCES, Faisalabad</p>
+          </div>
+          <div class="timeline-marker"><span class="timeline-year">2023</span></div>
+          <div class="timeline-side timeline-side-right">
+            <p class="timeline-desc">Started my CS degree — data structures, algorithms, databases, and software engineering, alongside shipping my own full-stack projects on the side.</p>
+          </div>
+        </div>
+
+        <div class="timeline-row reveal">
+          <div class="timeline-side timeline-side-left">
+            <p class="timeline-desc">Working on applied AI/ML features end-to-end — resume parsing, semantic matching, and RAG systems — plus the full-stack work needed to ship them.</p>
+          </div>
+          <div class="timeline-marker timeline-marker-active"><span class="timeline-year">2026</span></div>
+          <div class="timeline-side timeline-side-right">
+            <p class="timeline-role">AI Engineer Intern</p>
+            <p class="timeline-org">AIKSOL Technologies</p>
+          </div>
+        </div>
+
+        <div class="timeline-row reveal">
+          <div class="timeline-side timeline-side-left">
+            <p class="timeline-role">Now</p>
+            <p class="timeline-org">Building &amp; shipping</p>
+          </div>
+          <div class="timeline-marker timeline-marker-now"><span class="timeline-year">NOW</span></div>
+          <div class="timeline-side timeline-side-right">
+            <p class="timeline-desc">Continuing the internship while building independent projects — YomoLoco, Resumify, and CourseForge — and applying for full-time AI/ML and full-stack roles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS (category cards) ============ -->
+  <section class="skills" id="skills">
+    <div class="section-inner">
+      <p class="section-label reveal">04 / Toolkit</p>
+      <h2 class="section-title reveal">What I actually build with, grouped by what it's for.</h2>
+      <div class="cat-grid">
+        <div class="cat-card reveal">
+          <p class="cat-icon">&lt;/&gt;</p>
+          <h3>Full Stack Dev</h3>
+          <p class="cat-desc">Component-driven React and Next.js frontends backed by Node.js/Express and FastAPI services, styled with Tailwind.</p>
+          <div class="cat-tags">
+            <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Tailwind</span>
+          </div>
+        </div>
+        <div class="cat-card reveal">
+          <p class="cat-icon">◈</p>
+          <h3>AI &amp; LLM</h3>
+          <p class="cat-desc">Building retrieval and generation systems — RAG pipelines, embedding search, and LLM APIs wired into real product workflows.</p>
+          <div class="cat-tags">
+            <span>RAG</span><span>LLM Integration</span><span>NLP</span><span>Vector Embeddings</span><span>FastAPI</span>
+          </div>
+        </div>
+        <div class="cat-card reveal">
+          <p class="cat-icon">▤</p>
+          <h3>Data &amp; Infra</h3>
+          <p class="cat-desc">Modelling relational schemas, tuning queries, and standing up the vector + relational stores that AI features run on.</p>
+          <div class="cat-tags">
+            <span>PostgreSQL</span><span>Prisma</span><span>Qdrant</span><span>Supabase</span>
+          </div>
+        </div>
+        <div class="cat-card reveal">
+          <p class="cat-icon">◍</p>
+          <h3>Tools &amp; Workflow</h3>
+          <p class="cat-desc">Version control, deployment, and the day-to-day tooling that gets a project from local build to a URL someone can use.</p>
+          <div class="cat-tags">
+            <span>Git</span><span>GitHub</span><span>Vercel</span><span>SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECHSTACK ORBIT ============ -->
+  <section class="techstack" id="techstack">
+    <div class="section-inner">
+      <p class="section-label reveal">05 / Arsenal</p>
+      <h2 class="section-title reveal">My techstack</h2>
+      <p class="section-sub reveal">Orbiting continuously — hover to pause.</p>
+    </div>
+    <div class="orbit-field" id="orbit-field">
+      <div class="orbit-path orbit-path-a">
+        <div class="orbit-item"><span class="orbit-chip chip-py">Python</span></div>
+      </div>
+      <div class="orbit-path orbit-path-b">
+        <div class="orbit-item"><span class="orbit-chip chip-blue">FastAPI</span></div>
+      </div>
+      <div class="orbit-path orbit-path-c">
+        <div class="orbit-item"><span class="orbit-chip chip-teal">RAG</span></div>
+      </div>
+      <div class="orbit-path orbit-path-d">
+        <div class="orbit-item"><span class="orbit-chip chip-blue">Next.js</span></div>
+      </div>
+      <div class="orbit-path orbit-path-e">
+        <div class="orbit-item"><span class="orbit-chip chip-teal">PostgreSQL</span></div>
+      </div>
+      <div class="orbit-path orbit-path-f">
+        <div class="orbit-item"><span class="orbit-chip chip-py">Qdrant</span></div>
+      </div>
+      <div class="orbit-path orbit-path-g">
+        <div class="orbit-item"><span class="orbit-chip chip-blue">React</span></div>
+      </div>
+      <div class="orbit-path orbit-path-h">
+        <div class="orbit-item"><span class="orbit-chip chip-teal">Node.js</span></div>
+      </div>
+      <div class="orbit-core">MA</div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-inner contact-grid">
+      <div class="contact-copy reveal">
+        <p class="section-label">05 / Contact</p>
+        <h2>Let's build something.</h2>
+        <p>
+          Open to AI/ML engineering and full-stack roles, internships, and interesting
+          collaborations. The fastest way to reach me is email — the form works too.
+        </p>
+        <a href="mailto:ranaabdullah120705@gmail.com" class="email-link" id="email-link">
+          ranaabdullah120705@gmail.com
+          <span class="copy-hint" id="copy-hint">click to copy</span>
+        </a>
+        <div class="contact-social">
+          <a href="https://github.com/MuhammadAbdullah12-ux" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/muhammadabdullah12" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">
+          <span class="btn-label">Send message</span>
+        </button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <p>Muhammad Abdullah — AI/ML Engineer</p>
+      <p class="footer-meta">Built with vanilla JS, canvas, and no framework overhead.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
