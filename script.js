@@ -384,15 +384,11 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   const submitBtn = form.querySelector('.form-submit');
   const submitLabel = submitBtn.querySelector('.btn-label');
 
+  if (!form) return;
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const actionUrl = form.getAttribute('action');
-
-    if (!actionUrl || actionUrl.includes('YOUR_FORM_ID')) {
-      status.textContent = 'Form not connected yet — email directly instead.';
-      status.className = 'form-status error';
-      return;
-    }
 
     submitLabel.textContent = 'Sending…';
     submitBtn.disabled = true;
@@ -402,21 +398,32 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     try {
       const res = await fetch(actionUrl, {
         method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: new FormData(form),
+        headers: { 
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value,
+          _subject: "New Portfolio Message from " + form.name.value
+        }),
       });
 
       if (res.ok) {
-        status.textContent = 'Message sent — thanks, I\u2019ll get back to you soon.';
+        status.textContent = 'Message sent successfully! I\u2019ll get back to you soon.';
         status.className = 'form-status success';
         form.reset();
       } else {
-        status.textContent = 'Something went wrong — email directly instead.';
-        status.className = 'form-status error';
+        throw new Error('Submission failed');
       }
     } catch (err) {
-      status.textContent = 'Network error — email directly instead.';
-      status.className = 'form-status error';
+      const name = encodeURIComponent(form.name.value);
+      const message = encodeURIComponent(`From: ${form.name.value} (${form.email.value})\n\n${form.message.value}`);
+      window.location.href = `mailto:ranaabdullah120705@gmail.com?subject=Portfolio%20Contact%20from%20${name}&body=${message}`;
+      status.textContent = 'Opening email app to send your message...';
+      status.className = 'form-status success';
+      form.reset();
     } finally {
       submitLabel.textContent = 'Send message';
       submitBtn.disabled = false;
